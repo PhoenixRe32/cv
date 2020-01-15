@@ -343,6 +343,20 @@
                       \foreach \n in {#6}{\cvtag{\n}}
                    } 	\\
   }
+% Render a mentorship  experiences
+% Usage:
+% \personal
+%  {<End date>}      {<Project title/description>}
+%  {<Start date}     {
+%                      <Experience description (Could be a list)>
+%                    }
+%                    {<Ê list>}
+\newcommand\coaching[4]{
+  \textsc{#1}    & \textsc{#2}   								\\*
+  \textsc{#3}    & \begin{minipage}[t]{\rightcolumnlength}
+  					         #4
+                   \end{minipage}										\\*
+  }
 % Render an experience in the experiences environment
 % Usage:
 % \experience

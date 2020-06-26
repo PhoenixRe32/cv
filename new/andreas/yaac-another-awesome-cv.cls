@@ -300,7 +300,7 @@
 	 }
 	 \bigskip
   }{
-    \color{accentcolor}\textbf{\large{#1}}\color{black}
+    \color{accentcolor}\textbf{\large{\textsc{#1}}}\color{black}
   }
 }
 

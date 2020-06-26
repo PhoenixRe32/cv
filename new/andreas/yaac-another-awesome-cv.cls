@@ -480,6 +480,24 @@
   \newcommand\emptySeparator{\multicolumn{2}{c}{}\\}
 \fi
 
+% Render a personal project in the experiences environment
+% Usage:
+% \personal
+%  {<End date>}      {<Project title/description>}
+%  {<Start date}     {
+%                      <Experience description (Could be a list)>
+%                    }
+%                    {<Ê list>}
+\newcommand\personal[6]{
+  \textbf{#1}    & \textbf{#2}   								\\*
+  \textbf{#3}    & \begin{minipage}[t]{\rightcolumnlength}
+  					         #4
+                   \end{minipage}										\\*
+                 & \footnotesize{
+                      \foreach \n in {#5}{\cvhtag{\n}}
+                      \foreach \n in {#6}{\cvtag{\n}}
+                   } 	\\
+  }
 
 
 % Define the 'projects' environment

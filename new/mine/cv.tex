@@ -1,0 +1,47 @@
+% !TEX TS-program = luatex
+% Awesome Source CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/darwiin/awesome-neue-latex-cv
+%
+% Author:
+% Christophe Roger (Darwiin)
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+
+\documentclass[localFont,alternative,10pt,compact]{yaac-another-awesome-cv}
+\name{Andreas}{Andreou}
+\tagline{Software Developer}
+\socialinfo{
+	\address{68 Quarter House, Juniper Drive, Wandsworth, SW18 1GX, London, UK}\\
+	\smartphone{+44 (0) 7462 887 207}
+	\linkedin{andreasandreoudimitriou}
+	\github{pittacode}\\
+	\email{andreas.andreou.dev@gmail.com}
+}
+
+% Uncomment the following line and use a value from 1.5cm to 2.5cm
+%\setleftcolumnlength{2.5cm}
+
+
+
+\begin{document}
+
+	\makecvheader
+
+	\makecvfooter
+		{\textsc{\today}} % \selectlanguage{english}\today
+		{\textsc{Andreas Andreou - CV}}
+		{\thepage}
+
+	\input{section_headline}
+	\input{section_skills}
+	\input{section_experience_short}
+	\input{section_langues}
+	\input{section_scolarite}
+	\input{section_projets}
+	\input{section_references}
+
+
+\end{document}

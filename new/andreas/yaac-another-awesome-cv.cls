@@ -499,6 +499,22 @@
                    } 	\\
   }
 
+% Render a mentorship  experiences
+% Usage:
+% \personal
+%  {<End date>}      {<Short title>}
+%  {<Start date}     {
+%                      <Experience description (Could be a list)>
+%                    }
+%                    {<Ê list>}
+\newcommand\mentoring[4]{
+  \textbf{#1}    & \textbf{#2}   								\\*
+  \textbf{#3}    & \begin{minipage}[t]{\rightcolumnlength}
+  					         #4
+                   \end{minipage}										\\*
+  }
+
+
 
 % Define the 'projects' environment
 \newenvironment{projects}{%

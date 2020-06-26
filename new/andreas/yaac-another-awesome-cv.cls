@@ -211,6 +211,10 @@
 \newcommand{\cvtag}[1]{%
   \tikz[baseline]\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
 }
+\definecolor{softblue}{RGB}{210,223,248}
+\newcommand{\cvhtag}[1]{%
+  \tikz[baseline]\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex,fill=softblue]{\textbf{#1}};
+}
 
 % Render author's name
 % Usage: \user{<firstanme>}{<lastname>}
@@ -434,17 +438,21 @@
 % Render an experience in the experiences environment
 % Usage:
 % \experience
-%  {<End date>}      {<Title>}{<Enterprise>}{<Country>}
+%  {<End date>}      {<Position Title>}{<Company>}{<Location>}
 %  {<Start date}     {
 %                      <Experience description (Could be a list)>
 %                    }
-%                    {<Technology list>}
-\newcommand\experience[7]{
+%                    {<Technology list - Major, good at, important>}
+%                    {<Technology list - Others>}
+\newcommand\experience[8]{
   \textbf{#1}    & \textbf{#2, \textsc{#3}, #4}   								\\*
   \textbf{#5}    & \begin{minipage}[t]{\rightcolumnlength}
   					         #6
                    \end{minipage}										\\*
-                 & \footnotesize{\foreach \n in {#7}{\cvtag{\n}}} 	\\
+                 & \footnotesize{
+                    \foreach \n in {#7}{\cvhtag{\n}}
+                    \foreach \n in {#8}{\cvtag{\n}}
+                   } 	\\
   }
 
 % Render a consultant experience in the experiences environment

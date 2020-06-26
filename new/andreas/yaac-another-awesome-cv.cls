@@ -362,7 +362,7 @@
         \idphoto
       \end{minipage}
     }{}
-    \bigskip
+    \smallskip
   }
 }
 
